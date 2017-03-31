@@ -44,5 +44,7 @@ adb shell "chmod 0755 /system/usr/srec/en-US"
 adb push system/usr/srec/en-US /system/usr/srec/en-US/
 adb shell "chmod -R 0644 /system/usr/srec/"
 
-adb shell rm -rf /tmp/okgoogle
+adb shell rm -rf /tmp
+adb shell "mount -o remount,ro /system"
+adb shell "mount -o remount,ro /"
 echo Reboot your Head Unit NOW!
